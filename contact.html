@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Fun Learning Youth (FLY)</title>
+  <meta name="description" content="Contact Fun Learning Youth (FLY): email, phone, and ways to collaborate." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- BANANA -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Fun Learning Youth</span>
+        <span class="brand-sub">Contact / collaborate / volunteer</span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
+        <a data-nav="home" href="index.html">Home</a>
+        <a data-nav="about" href="about.html">About</a>
+        <a data-nav="projects" href="projects.html">Projects</a>
+        <a data-nav="contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container split">
+        <div>
+          <p class="kicker">Contact</p>
+          <h1>Reach FLY directly.</h1>
+          <p class="lede">
+            Email us at
+            <a href="mailto:withfunlearningyouth@gmail.com">withfunlearningyouth@gmail.com</a>
+            for questions or joining.
+          </p>
+          <p class="lede">For collaboration, share your city, your idea, and your timeline.</p>
+        </div>
+
+        <figure class="figure">
+          <img src="assets/photos/contact-01.jpg" alt="BANANA" loading="lazy" decoding="async" />
+          <figcaption>BANANA</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Phone and email</h2>
+          <p class="tight"><strong>Call:</strong> <a href="tel:+919422296800">+91 9422296800</a></p>
+          <p class="tight"><strong>Email:</strong> <a href="mailto:withfunlearningyouth@gmail.com">withfunlearningyouth@gmail.com</a></p>
+
+          <p class="note mt-md">
+            <strong>Collaboration:</strong> we are open to collaborations with other institutions and organizations. If
+            you are a nonprofit, school-adjacent group, or community org, tell us what student population you serve and
+            what you are hoping FLY can do with you - not just for you.
+          </p>
+        </div>
+
+        <div>
+          <h2>Message form</h2>
+          <p class="lede">Send your message below.</p>
+
+          <!-- BANANA -->
+          <form class="stack" data-contact-form action="mailto:withfunlearningyouth@gmail.com" method="post" enctype="text/plain">
+            <label class="field" for="cf-name">Name (optional)</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" />
+
+            <label class="field" for="cf-topic">Topic</label>
+            <select id="cf-topic" name="topic">
+              <option>Volunteering</option>
+              <option>Starting / supporting a chapter</option>
+              <option>Collaboration</option>
+              <option>Press</option>
+              <option>Donations / fundraising</option>
+              <option>General</option>
+            </select>
+
+            <label class="field" for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+
+            <div class="hero-actions flush">
+              <button class="btn" type="submit">Compose email</button>
+              <a class="btn btn-ghost" href="mailto:withfunlearningyouth@gmail.com">Open blank email</a>
+            </div>
+
+            <p class="small mt-sm">
+              Privacy note: do not share a student's identifiable details without consent and local safety guidance.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">Fun Learning Youth</p>
+        <p class="footer-muted">
+          Youth-led nonprofit focused on retention, dignity-first learning, and mentorship that can survive real life.
+        </p>
+        <p class="small mt-sm">
+          <strong>Social:</strong>
+          Instagram - <span class="small">BANANA</span><br />
+          LinkedIn - <span class="small">BANANA</span><br />
+          YouTube - <span class="small">BANANA</span>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+919422296800">Call: +91 9422296800</a>
+        <a href="mailto:withfunlearningyouth@gmail.com">Email: withfunlearningyouth@gmail.com</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <span class="small">© Fun Learning Youth</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
