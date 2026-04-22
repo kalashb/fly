@@ -126,7 +126,7 @@ function initSlider(root) {
     timer = window.setInterval(function () {
       if (index >= slides.length - 1) setIndex(0);
       else step(1);
-    }, 6500);
+    }, 2200); // this is the time in milliseconds between each slide
   }
 
   function restartAutoplay() {
