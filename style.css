@@ -459,13 +459,13 @@ main {
 
 .story-scroll {
   margin-top: 1rem;
-  min-height: 92vh;
+  min-height: 78vh;
 }
 
 .story-sticky {
   position: sticky;
   top: 84px;
-  height: min(68vh, 520px);
+  height: min(62vh, 470px);
   display: block;
 }
 
@@ -534,6 +534,12 @@ main {
   border: 1px solid var(--line);
   overflow: hidden;
   background: var(--paper);
+}
+
+.story-card:first-child {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 .story-card.active {
