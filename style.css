@@ -459,13 +459,13 @@ main {
 
 .story-scroll {
   margin-top: 1rem;
-  min-height: 78vh;
+  min-height: 96vh;
 }
 
 .story-sticky {
   position: sticky;
   top: 84px;
-  height: min(62vh, 470px);
+  height: min(80vh, 620px);
   display: block;
 }
 
