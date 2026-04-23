@@ -180,9 +180,51 @@ function initContactForm() {
   });
 }
 
+function initStoryScroll() {
+  var section = qs(document, "[data-story-scroll]");
+  if (!section) return;
+
+  var cards = qsa(section, "[data-story-card]");
+  var dots = qsa(section, "[data-story-dot]");
+  if (cards.length < 2) return;
+
+  var reduceMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
+
+  function setActive(index) {
+    cards.forEach(function (card, i) {
+      card.classList.toggle("active", i === index);
+    });
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  function onScroll() {
+    if (window.innerWidth <= 900) {
+      cards.forEach(function (card) {
+        card.classList.add("active");
+      });
+      return;
+    }
+
+    var rect = section.getBoundingClientRect();
+    var total = Math.max(1, rect.height - window.innerHeight);
+    var progress = Math.min(1, Math.max(0, -rect.top / total));
+    var index = Math.min(cards.length - 1, Math.floor(progress * cards.length));
+    setActive(index);
+  }
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   initActiveNav();
   initNav();
   initSlider(qs(document, "[data-slider]"));
   initContactForm();
+  initStoryScroll();
 });
